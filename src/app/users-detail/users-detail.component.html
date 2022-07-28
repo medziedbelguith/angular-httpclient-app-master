@@ -1,0 +1,23 @@
+<p>users-detail works!</p>
+
+<div class="container custom-container-2">
+  <h3 class="mb-3 text-center">User Details</h3>
+  <table class="table table-bordered">
+    <caption>List of users</caption>
+    <thead>
+      <tr>
+        <th scope="col">User Details</th>
+        <th scope="col">User Entry in List => {{userData.id}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><b>ID</b></td><td>{{userData.id}}</td></tr>
+      <tr><td><b>First Name</b></td><td>{{userData.first_name}}</td></tr>
+      <tr><td><b>Last Name</b></td><td>{{userData.last_name}}</td></tr>
+      <tr><td><b>Email</b></td><td>{{userData.email}}</td></tr>
+      <tr><td><b>Avatar</b></td><td><img [src]="userData.avatar"></td></tr>
+      <tr scope="col" colspan="2"><span class="edit" routerLink="/users-list">Go Back to Users List</span></tr>
+        <tr scope="col" colspan="2"><span class="edit" routerLink="/create-employee">Go Back to Select User Section List</span></tr>
+    </tbody>
+  </table>
+ </div>

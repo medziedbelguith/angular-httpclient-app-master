@@ -1,0 +1,32 @@
+<div class="container custom-container-2">
+    <!-- Employees list table, it hides when there is no employee -->
+    <div *ngIf="Users.length !== 0">
+      <h3 class="mb-3 text-center">User List</h3>
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">User Id</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Avatar</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of Users">
+              <td>{{ user.id }}</td>
+              <td>{{ user.first_name }}</td>
+              <td>{{ user.last_name }}</td>
+              <td>{{ user.email }}</td>
+              <td><img [src]="user.avatar"></td>
+              <td>
+                <span type="detail" routerLink="/users-detail/{{ user.id }}">Details</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

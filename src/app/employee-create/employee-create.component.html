@@ -1,0 +1,27 @@
+<div class="container custom-container">
+    <div class="col-md-12">
+      <h3>Select a User</h3>
+      <div class="form-group">
+        <label for="sel1">Select list:</label>
+        <select class="form-control" id="sel1" (change)="changeWebsite($event)">
+        <option></option>
+        <option *ngFor="let u of (User | orderBy:'last_name' )">
+         {{u.last_name}}
+        </option>
+        </select>
+      </div>
+       <div class="box-header with-border">
+        <div class="form-group voffset row">
+          <label for="" class="vertical-label col-sm-4 col-md-8 text-right" style="margin-top:10px;">Select Name</label>
+          <div class="col-sm-8 col-md-4" style="margin-top:10px;">
+            <select class="hideLabel form-control" id="Id" (change)="changeWebsite($event)">
+              <option></option>
+              <option *ngFor="let u of (User | orderBy:'first_name' )">
+               {{u.first_name}}
+              </option>
+              </select>
+          </div>
+        </div>
+       </div>
+    </div>
+  </div>
